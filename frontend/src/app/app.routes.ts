@@ -36,4 +36,16 @@ export const routes: Routes = [
     path: 'likes',
     loadComponent: () => import('./features/likes/pages/likes/likes').then((m) => m.LikesPage),
   },
+{
+    path: 'auth/login',
+    loadComponent: () =>
+      import('./features/auth/pages/login/login')
+        .then(m => m.LoginPage)
+  },
+  {
+    path: 'auth/register/:role',
+    loadComponent: () =>
+      import('./features/auth/pages/register/register')
+        .then(m => m.RegisterPage)
+  }
 ];

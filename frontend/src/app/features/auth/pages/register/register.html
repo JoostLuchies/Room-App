@@ -1,0 +1,43 @@
+<section class="register-container">
+
+    <div class="register-content">
+
+        <h1>
+            Welkom bij RoomFindr 👋
+        </h1>
+
+
+        @if (role === 'tenant') {
+
+            <h2>
+                🏠 Kamerzoeker
+            </h2>
+
+            <p>
+                Vind kamers die passen bij jouw wensen
+                en match met aanbieders.
+            </p>
+
+        }
+
+
+        @if (role === 'provider') {
+
+            <h2>
+                🏡 Aanbieder
+            </h2>
+
+            <p>
+                Vind de perfecte match voor jouw kamer
+                of woonruimte.
+            </p>
+
+        }
+
+
+        <app-register-form [role]="role" />
+
+
+    </div>
+
+</section>
