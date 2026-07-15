@@ -1,0 +1,65 @@
+<section class="login-container">
+
+    <div class="login-card">
+
+        <h1>
+            Welkom terug 👋
+        </h1>
+
+        <p class="subtitle">
+            Log in om verder te gaan met RoomFindr.
+        </p>
+
+
+        <form>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Email</mat-label>
+
+                <input
+                    matInput
+                    type="email"
+                    placeholder="jouw@email.nl">
+
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Wachtwoord</mat-label>
+
+                <input
+                    matInput
+                    type="password">
+
+            </mat-form-field>
+
+
+            <button
+                mat-raised-button
+                color="primary"
+                type="submit">
+
+                Inloggen
+
+            </button>
+
+
+        </form>
+
+
+        <p class="register-link">
+
+            Nog geen account?
+
+            <a routerLink="/auth/register/tenant">
+                Registreren
+            </a>
+
+        </p>
+
+
+    </div>
+
+</section>
