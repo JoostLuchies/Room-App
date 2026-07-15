@@ -1,0 +1,60 @@
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="submit()">
+
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>Voornaam</mat-label>
+
+    <input
+      matInput
+      formControlName="firstName">
+
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>Achternaam</mat-label>
+
+    <input
+      matInput
+      formControlName="lastName">
+
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>Email</mat-label>
+
+    <input
+      matInput
+      formControlName="email">
+
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>Wachtwoord</mat-label>
+
+    <input
+      matInput
+      type="password"
+      formControlName="password">
+
+  </mat-form-field>
+
+
+  <button
+    mat-raised-button
+    type="submit">
+
+    Account aanmaken
+
+  </button>
+
+
+</form>
