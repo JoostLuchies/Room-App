@@ -1,7 +1,46 @@
+
+
 <form
   [formGroup]="registerForm"
   (ngSubmit)="submit()">
 
+@if (role() === 'tenant') {
+
+  <h2>Kamerzoeker</h2>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Zoeklocatie</mat-label>
+    <input matInput formControlName="location">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Maximaal budget (€)</mat-label>
+    <input
+      matInput
+      type="number"
+      formControlName="budget">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Beschikbaar vanaf</mat-label>
+    <input
+      matInput
+      type="date"
+      formControlName="availableFrom">
+  </mat-form-field>
+
+}
+
+
+@if (role() === 'provider') {
+
+  <h2>Aanbieder</h2>
+
+  <p>
+    In de volgende iteratie voegen we de gegevens van de woning toe.
+  </p>
+
+}
 
   <mat-form-field appearance="outline">
 

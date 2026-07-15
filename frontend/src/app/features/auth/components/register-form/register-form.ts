@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserRole } from '../../../../core/models/user-role';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 export class RegisterForm {
   private readonly formBuilder = inject(FormBuilder);
 
+  role = input<UserRole | undefined>();
+
   registerForm = this.formBuilder.group({
     firstName: ['', Validators.required],
 
@@ -22,6 +25,19 @@ export class RegisterForm {
     email: ['', [Validators.required, Validators.email]],
 
     password: ['', [Validators.required, Validators.minLength(8)]],
+
+    budget: [
+    null
+  ],
+
+  location: [
+    ''
+  ],
+
+  availableFrom: [
+    ''
+  ]
+
   });
 
   submit(): void {
