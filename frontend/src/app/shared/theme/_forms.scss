@@ -1,0 +1,13 @@
+
+
+.rf-form {
+  display: flex;
+  flex-direction: column;
+  gap: $rf-space-md;
+  max-width: $rf-form-width;
+  width: 100%;
+}
+
+.rf-form mat-form-field {
+  width: 100%;
+}

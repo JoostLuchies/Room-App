@@ -1,0 +1,30 @@
+<article class="rf-room-card">
+
+  <img
+    class="rf-room-card__image"
+    [src]="room().imageUrl"
+    [alt]="room().title">
+
+  <div class="rf-room-card__content">
+
+    <h2>{{ room().title }}</h2>
+
+    <p class="rf-room-card__location">
+      📍 {{ room().city }}
+    </p>
+
+    <p class="rf-room-card__price">
+      € {{ room().price }} / maand
+    </p>
+
+    <p class="rf-room-card__available">
+      Beschikbaar vanaf {{ room().availableFrom }}
+    </p>
+
+    <p class="rf-room-card__description">
+      {{ room().description }}
+    </p>
+
+  </div>
+
+</article>

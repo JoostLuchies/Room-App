@@ -4,7 +4,7 @@ import { NavbarComponent } from './layout/navbar/navbar';
 import { FooterComponent } from './layout/footer/footer';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rf-root',
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',

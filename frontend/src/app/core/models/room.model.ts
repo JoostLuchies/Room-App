@@ -5,4 +5,5 @@ export interface Room {
   price: number;
   city: string;
   imageUrl: string;
+  availableFrom: string;
 }

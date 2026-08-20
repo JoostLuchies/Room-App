@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-rooms',
+  selector: 'rf-rooms',
   imports: [],
   templateUrl: './rooms.html',
   styleUrl: './rooms.scss',
 })
-export class RoomsPage {
-
-}
+export class RoomsPage {}

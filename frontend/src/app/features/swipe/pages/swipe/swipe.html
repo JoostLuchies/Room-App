@@ -1,1 +1,37 @@
-<p>swipe works!</p>
+@if (currentRoom) {
+
+  <rf-room-card [room]="currentRoom"></rf-room-card>
+
+  <div class="swipe-actions">
+
+    <button
+      mat-fab
+      type="button"
+      aria-label="Kamer afwijzen"
+      (click)="dislike()">
+      ❌
+    </button>
+
+    <button
+      mat-fab
+      type="button"
+      aria-label="Kamer liken"
+      (click)="like()">
+      ❤️
+    </button>
+
+  </div>
+
+} @else {
+
+  <div class="swipe-empty">
+
+    <h2>Je hebt alle kamers bekeken!</h2>
+
+    <p>
+      Er zijn op dit moment geen nieuwe kamers meer.
+    </p>
+
+  </div>
+
+}

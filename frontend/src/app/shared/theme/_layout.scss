@@ -1,0 +1,17 @@
+
+
+.rf-page {
+  max-width: $rf-content-width;
+  margin: 0 auto;
+  padding: $rf-space-xl;
+}
+
+.rf-section {
+  margin-bottom: $rf-space-2xl;
+}
+
+.rf-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -36,7 +36,13 @@ export const routes: Routes = [
     path: 'likes',
     loadComponent: () => import('./features/likes/pages/likes/likes').then((m) => m.LikesPage),
   },
-{
+  {
+    path: 'dislikes',
+    loadComponent: () =>
+      import('./features/dislikes/pages/dislikes/dislikes')
+        .then((m) => m.DislikesPage)
+  },
+  {
     path: 'auth/login',
     loadComponent: () =>
       import('./features/auth/pages/login/login')

@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'rf-auth',
   imports: [],
   templateUrl: './auth.html',
   styleUrl: './auth.scss',
 })
-export class AuthPage {
-
-}
+export class AuthPage {}
