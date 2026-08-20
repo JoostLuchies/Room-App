@@ -6,16 +6,13 @@ import { RegisterForm } from '../../components/register-form/register-form';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-register',
-  imports: [
-    MatButtonModule,
-    RegisterForm
-  ],
+  selector: 'rf-register',
+  imports: [MatButtonModule, RegisterForm],
   templateUrl: './register.html',
   styleUrl: './register.scss',
 })
 export class RegisterPage {
- private route = inject(ActivatedRoute);
+  private route = inject(ActivatedRoute);
 
   role = this.route.snapshot.paramMap.get('role') as UserRole | undefined;
 }

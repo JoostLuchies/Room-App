@@ -1,3 +1,18 @@
+<section class="rf-page">
+
+  <h1>Uitgelichte kamers</h1>
+
+  @for (room of rooms; track room.id) {
+
+    <rf-room-card
+      [room]="room">
+    </rf-room-card>
+
+  }
+
+</section>
+
+<!--
 <section class="hero">
 
     <div class="hero-content">
@@ -32,7 +47,7 @@
             <button
                 mat-stroked-button
                 routerLink="/auth/register/provider">
-                
+
                 Ik bied een kamer aan
 
             </button>
@@ -74,3 +89,4 @@
     </div>
 
 </section>
+-->

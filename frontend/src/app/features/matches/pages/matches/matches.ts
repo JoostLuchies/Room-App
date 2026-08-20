@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-matches',
+  selector: 'rf-matches',
   imports: [],
   templateUrl: './matches.html',
   styleUrl: './matches.scss',
 })
-export class MatchesPage {
-
-}
+export class MatchesPage {}

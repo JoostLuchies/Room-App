@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 @Component({
-  selector: 'app-register-form',
+  selector: 'rf-register-form',
   imports: [ReactiveFormsModule, MatButtonModule, MatFormFieldModule, MatInputModule],
   templateUrl: './register-form.html',
   styleUrl: './register-form.scss',
@@ -26,18 +26,11 @@ export class RegisterForm {
 
     password: ['', [Validators.required, Validators.minLength(8)]],
 
-    budget: [
-    null
-  ],
+    budget: [null],
 
-  location: [
-    ''
-  ],
+    location: [''],
 
-  availableFrom: [
-    ''
-  ]
-
+    availableFrom: [''],
   });
 
   submit(): void {

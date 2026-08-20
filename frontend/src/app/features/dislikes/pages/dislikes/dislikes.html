@@ -1,0 +1,29 @@
+<h1>Mijn afgewezen kamers</h1>
+
+@if (dislikedRooms.length > 0) {
+
+  <div class="dislikes-grid">
+
+    @for (room of dislikedRooms; track room.id) {
+
+      <rf-room-card
+        [room]="room">
+      </rf-room-card>
+
+    }
+
+  </div>
+
+} @else {
+
+  <div class="dislikes-empty">
+
+    <h2>Nog geen afgewezen kamers</h2>
+
+    <p>
+      Kamers die je afwijst verschijnen hier.
+    </p>
+
+  </div>
+
+}

@@ -5,7 +5,10 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
-@use './app/shared/styles/index' as *;
+@import './app/shared/theme/variables';
+@import './app/shared/theme/spacing';
+@import './app/shared/theme/layout';
+@import './app/shared/theme/forms';
 
 html {
   @include mat.theme((

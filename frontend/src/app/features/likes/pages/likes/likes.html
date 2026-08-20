@@ -1,1 +1,29 @@
-<p>likes works!</p>
+<h1>Mijn likes</h1>
+
+@if (likedRooms.length > 0) {
+
+  <div class="likes-grid">
+
+    @for (room of likedRooms; track room.id) {
+
+      <rf-room-card
+        [room]="room">
+      </rf-room-card>
+
+    }
+
+  </div>
+
+} @else {
+
+  <div class="likes-empty">
+
+    <h2>Nog geen likes</h2>
+
+    <p>
+      Kamers die je leuk vindt verschijnen hier.
+    </p>
+
+  </div>
+
+}
