@@ -1,8 +1,15 @@
 .rf-room-card {
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background: white;
+}
+
+.rf-room-card:active {
+  cursor: grabbing;
 }
 
 .rf-room-card__image {

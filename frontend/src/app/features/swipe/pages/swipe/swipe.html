@@ -1,6 +1,10 @@
 @if (currentRoom) {
 
-  <rf-room-card [room]="currentRoom"></rf-room-card>
+  <rf-room-card
+  [room]="currentRoom"
+  (swipeLeft)="dislike()"
+  (swipeRight)="like()"
+  ></rf-room-card>
 
   <div class="swipe-actions">
 

@@ -1,4 +1,11 @@
-<article class="rf-room-card">
+<article
+class="rf-room-card"
+rfSwipe
+(positionChange)="onPositionChange($event)"
+(swipeRight)="swipeRight.emit()"
+(swipeLeft)="swipeLeft.emit()"
+[style.transform]="'translateX(' + positionX + 'px)'"
+ >
 
   <img
     class="rf-room-card__image"
