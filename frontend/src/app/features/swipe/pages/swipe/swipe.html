@@ -1,6 +1,11 @@
 @if (currentRoom) {
 
-  <rf-room-card [room]="currentRoom"></rf-room-card>
+  <rf-room-card
+  [room]="currentRoom"
+  (swipeLeft)="dislike()"
+  (swipeRight)="like()"
+  (swipeProgressChange)="onSwipeProgressChange($event)"
+  ></rf-room-card>
 
   <div class="swipe-actions">
 
@@ -8,7 +13,9 @@
       mat-fab
       type="button"
       aria-label="Kamer afwijzen"
-      (click)="dislike()">
+      (click)="dislike()"
+      [style.transform]="'scale(' + (swipeProgress < 0 ? 1 - swipeProgress * 0.4 : 1) + ')'"
+      >
       ❌
     </button>
 
@@ -16,7 +23,8 @@
       mat-fab
       type="button"
       aria-label="Kamer liken"
-      (click)="like()">
+      (click)="like()"
+      [style.transform]="'scale(' + (swipeProgress > 0 ? 1 + swipeProgress * 0.4 : 1) + ')'">
       ❤️
     </button>
 
