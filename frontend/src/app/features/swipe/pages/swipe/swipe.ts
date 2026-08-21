@@ -22,6 +22,7 @@ export class SwipePage implements OnInit {
   rooms: Room[] = [];
 
   currentRoomIndex = 0;
+  swipeProgress = 0;
 
   ngOnInit(): void {
     this.roomService.getRooms().subscribe(rooms => {
@@ -49,6 +50,11 @@ dislike(): void {
 
 private nextRoom(): void {
   this.currentRoomIndex++;
+}
+
+onSwipeProgressChange(swipeProgress: number): void {
+  this.swipeProgress = swipeProgress;
+
 }
 
 }

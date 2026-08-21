@@ -2,9 +2,14 @@
 class="rf-room-card"
 rfSwipe
 (positionChange)="onPositionChange($event)"
+(animationChange)="onAnimationChange($event)"
+(rotationChange)="onRotationChange($event)"
+(positionYChange)="onPositionYChange($event)"
+(swipeProgressChange)="onSwipeProgressChange($event)"
 (swipeRight)="swipeRight.emit()"
 (swipeLeft)="swipeLeft.emit()"
-[style.transform]="'translateX(' + positionX + 'px)'"
+[style.transform]="'translate(' + positionX + 'px, ' + positionY + 'px) rotate(' + rotation + 'deg)'"
+[class.rf-room-card--animating]="isAnimating"
  >
 
   <img
@@ -31,6 +36,7 @@ rfSwipe
     <p class="rf-room-card__description">
       {{ room().description }}
     </p>
+
 
   </div>
 
