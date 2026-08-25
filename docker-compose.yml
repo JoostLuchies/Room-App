@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: roomfindr-postgres
+    environment:
+      POSTGRES_DB: roomfindr
+      POSTGRES_USER: roomfindr
+      POSTGRES_PASSWORD: roomfindr
+    ports:
+      - "5433:5432"
+    volumes:
+      - roomfindr-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  roomfindr-postgres-data:
